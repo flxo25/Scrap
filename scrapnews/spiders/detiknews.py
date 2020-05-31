@@ -5,9 +5,9 @@ import spacy
 from nltk.tokenize import sent_tokenize
 
 class DetiknewsSpider(scrapy.Spider):
-    name = 'detiknews'
+    name = 'detiknews'  
     allowed_domains = ['news.detik.com'] 
-    start_urls = ['https://news.detik.com/indeks/?date=02/{}/2020'.format(page) for page in range(10,29)]
+    start_urls = ['https://news.detik.com/indeks/?date=05/{}/2020'.format(page) for page in range(10,15)]
 
     def parse(self, response):        
         urls = response.xpath('//h3[@class="media__title"]//a/@href').getall()
