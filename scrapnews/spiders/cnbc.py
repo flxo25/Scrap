@@ -16,10 +16,7 @@ class CnbcSpider(scrapy.Spider):
     def parseNews(self, response):
 
         data = dict()
-        #judul
-        #konten
         data['konten'] = [item.strip() for item in response.xpath('//div[@class="detail_text"]/text()').extract()]
-        #tanggal
         data['tanggal'] = response.xpath('//div[@class="date"]/text()').extract()
         data['judul'] = response.xpath('//div[@class="container"]/h1/text()').extract()
         data['sumber'] = 'CNBC INDONESIA'

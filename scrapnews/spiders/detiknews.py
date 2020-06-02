@@ -6,17 +6,16 @@ from nltk.tokenize import sent_tokenize
 
 class DetiknewsSpider(scrapy.Spider):
     name = 'detiknews'  
-    allowed_domains = ['news.detik.com'] 
-    start_urls = ['https://news.detik.com/indeks/?date=05/{}/2020'.format(page) for page in range(10,15)]
+    # allowed_domains = ['news.detik.com'] 
+    start_urls = ['https://news.detik.com/indeks/?date=04/{}/2020'.format(page) for page in range(10,15)]
 
     def parse(self, response):        
         urls = response.xpath('//h3[@class="media__title"]//a/@href').getall()
-        next_indeks_url = response.xpath('//div[@class="pagination text-center mgt-16 mgb-16"]/a/@href').extract()[-1]
-
-        for url in urls:
+        for url in urls:    
             if url:
                 yield scrapy.Request(url=url, callback=self.parseNews)
         
+        next_indeks_url = response.xpath('//div[@class="pagination text-center mgt-16 mgb-16"]/a/@href').extract()[-1]
         if next_indeks_url:
             yield scrapy.Request(url=next_indeks_url, callback=self.parse)
 

@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'scrapnews.spiders'
 
 #EXPORT CSV FEED
 FEED_FORMAT = 'csv'
-FEED_URI = 'detiknews.csv'
+FEED_URI = 'a.csv'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'scrapnews (+http://www.yourdomain.com)'
