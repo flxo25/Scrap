@@ -1,1 +1,12 @@
-Merdeka -
+Merdeka - INDEKS beritanya ngebug, diclick malah 404, atau ga ada beritanya
+CNBC - bermasalah, tag tiap beritanya beda
+
+Liputan6 - bisa 2131 (bermasalah, ada limit buat scrap)
+Republika - bisa 20981
+Wowkeren - bisa 4455
+Sindonews - bisa 8203
+Kompas - bisa 3346 (bermasalah, ada limit buat scrap)
+Tempo - bisa 9218
+OKEZONE - bisa 20515
+Detiknews - bisa 15974
+Judul, Konten, Sumber, Tanggal, Kategori, Konten_pisah, URL

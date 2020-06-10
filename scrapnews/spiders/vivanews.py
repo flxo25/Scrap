@@ -7,7 +7,7 @@ from nltk.tokenize import sent_tokenize
 
 class VivanewsSpider(scrapy.Spider):
     name = 'vivanews'
-    start_urls = ['https://www.vivanews.com/indeks/all/all/2020/05/{:02d}'.format(page) for page in range(1,2)]
+    start_urls = ['https://www.vivanews.com/indeks/all/all/2020/05/{:02d}'.format(page) for page in range(2,5)]
 
     def parse(self, response):
         urls = response.xpath('//a[@class="al-title"]/@href').getall()        
